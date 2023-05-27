@@ -4,7 +4,6 @@ import java.io.File;
 import java.io.IOException;
 import java.util.List;
 
-import com.booking.food_Order.entity.Address;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -15,7 +14,6 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import com.booking.food_Order.entity.Restaurant;
 import com.booking.food_Order.entity.RestaurantItems;
 import com.booking.food_Order.exception.ResourceNotFoundException;
 import com.booking.food_Order.service.RestaurantItemService;
@@ -157,4 +155,9 @@ public class RestaurantItemController {
     restaurantItemService.deleteAllRestaurantItemsByRestaurantId(restaurantId);
     return new ResponseEntity<>(HttpStatus.NO_CONTENT);
   }
+
+    @GetMapping("/countRestaurantItems")
+    public ResponseEntity<Integer> countRestaurantItems(){
+        return new ResponseEntity<>(restaurantItemService.countRestaurantItems(),HttpStatus.OK);
+    }
 }

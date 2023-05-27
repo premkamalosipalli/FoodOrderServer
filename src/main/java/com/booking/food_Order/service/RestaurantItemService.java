@@ -65,4 +65,8 @@ public class RestaurantItemService {
     // public RestaurantItems findByRestaurant(Restaurant restaurant){
     //     return restaurantItemRepository.findByRestaurant(restaurant);
     // }
+
+    public int countRestaurantItems(){
+        return  (int)restaurantItemRepository.count();
+    }
 }
