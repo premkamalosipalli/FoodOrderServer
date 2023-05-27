@@ -40,5 +40,8 @@ public class RestaurantService {
     public List<Restaurant> findAll(){
         return restaurantRepository.findAll();
     }
-    
+
+    public int countRestaurants(){
+        return  (int)restaurantRepository.count();
+    }
 }

@@ -151,5 +151,10 @@ public class RestaurantController {
     
     return new ResponseEntity<>(HttpStatus.NO_CONTENT);
   }
+
+  @GetMapping("/countRestaurants")
+    public ResponseEntity<Integer> countRestaurants(){
+        return new ResponseEntity<>(restaurantService.countRestaurants(),HttpStatus.OK);
+  }
     
 }
