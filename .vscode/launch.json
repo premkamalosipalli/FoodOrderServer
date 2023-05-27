@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-FoodOrderApplication<food_Order>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.booking.food_Order.FoodOrderApplication",
+            "projectName": "food_Order",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
